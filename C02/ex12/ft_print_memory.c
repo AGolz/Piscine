@@ -6,7 +6,7 @@
 /*   By: elmaksim <elmaksim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 01:35:46 by elmaksim          #+#    #+#             */
-/*   Updated: 2023/11/19 05:23:12 by elmaksim         ###   ########.fr       */
+/*   Updated: 2023/11/19 11:19:40 by elmaksim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	print_content(unsigned char *cursor, int size)
 void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned char	*cursor;
-	int				i;
+	unsigned int	i;
 
 	cursor = (unsigned char *)addr;
 	i = 0;

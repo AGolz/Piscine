@@ -6,13 +6,13 @@
 /*   By: elmaksim <elmaksim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 01:35:08 by elmaksim          #+#    #+#             */
-/*   Updated: 2023/11/19 05:21:20 by elmaksim         ###   ########.fr       */
+/*   Updated: 2023/11/19 11:19:13 by elmaksim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (src[i] != '\0' && i < n)
