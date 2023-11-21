@@ -58,7 +58,7 @@ void	print_content(unsigned char *cursor, int size)
 	while (j < size)
 	{
 		character = cursor[j];
-		if (character >= 32 && character <= 126)
+		if ((character >= 32 && character <= 126) || character == 32)
 			xy_putchar(character);
 		else
 			xy_putchar('.');
