@@ -6,32 +6,44 @@
 /*   By: elmaksim <elmaksim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 06:29:42 by elmaksim          #+#    #+#             */
-/*   Updated: 2023/11/19 08:09:47 by elmaksim         ###   ########.fr       */
+/*   Updated: 2023/11/21 13:37:33 by elmaksim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+int	ft_strlen(char *str)
 {
-	unsigned int	src_len;
-	unsigned int	dest_len;
-	unsigned int	i;
+	int	i;
 
-	src_len = 0;
-	dest_len = 0;
 	i = 0;
-	while (src[src_len] != '\0' && src_len < size - dest_len - 1)
-		src_len++;
-	while (dest[dest_len] != '\0')
-		dest_len++;
-	if (size <= dest_len)
-		return (dest_len + src_len);
-	i = 0;
-	while (src[i] != '\0' && i < size - dest_len - 1)
+	while (str[i] != '\0')
 	{
-		dest[dest_len + i] = src[i];
 		i++;
 	}
-	dest[dest_len + i] = '\0';
+	return (i);
+}
+
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+{
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	dest_len;
+	unsigned int	src_len;
+
+	i = 0;
+	j = 0;
+	while (dest[j] != '\0')
+		j++;
+	dest_len = j;
+	src_len = ft_strlen(src);
+	if (size == 0 || size <= dest_len)
+		return (src_len + size);
+	while (src [i] != '\0' && i < size - dest_len - 1)
+	{
+		dest[j] = src[i];
+		i++;
+		j++;
+	}
+	dest[j] = '\0';
 	return (dest_len + src_len);
 }
 
@@ -62,7 +74,6 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 
 //	return 0;
 //}
-
 //The idea behind strlcat is to provide a safer alternative 
 //to strncat by guaranteeing NUL-termination and avoiding buffer 
 //overflows. The return value allows the caller to determine 
