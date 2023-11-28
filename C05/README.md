@@ -12,7 +12,7 @@ ex06 | :white_check_mark: OK
 ex07 | :white_check_mark: OK
 ex08 | :white_check_mark: OK 
 
-[Project instructions][en.subject (1).pdf](https://github.com/AGolz/Piscine/files/13493176/en.subject.1.pdf)
+[Project instructions](https://github.com/AGolz/Piscine/files/13493176/en.subject.1.pdf)
 
 
 Need help: elmaksim@student.42yerevan.am
