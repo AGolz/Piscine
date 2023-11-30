@@ -6,7 +6,7 @@
 /*   By: elmaksim <elmaksim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 01:35:27 by elmaksim          #+#    #+#             */
-/*   Updated: 2023/11/18 23:51:39 by elmaksim         ###   ########.fr       */
+/*   Updated: 2023/11/30 19:18:30 by elmaksim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (*str != '\0')
 	{
-		if (*str < ' ' || *str >= '~')
+		if (*str <= ' ' || *str >= '~')
 			return (0);
 		str++;
 	}
